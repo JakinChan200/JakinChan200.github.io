@@ -1,0 +1,16 @@
+.menubar {
+    background-color: #03ecfc;
+    overflow: hidden;
+}
+
+.menubar a {
+    float: left;
+    color: black;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+.menubar a:hover {
+    background-color: aliceblue;
+    color: aqua;
+}
