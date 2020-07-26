@@ -17,7 +17,7 @@
 }
 
 .background {
-    width: 50%;
+    width: 100%;
 }
 
 div.login-card {
@@ -34,18 +34,19 @@ div.login-card {
     margin-top: 100px;
     margin-right: 100px;
     border-radius: 25px;
+    background-color: white;
 }
 
 .username {
     text-align: left;
 }
 
-
 div.signupform
 {
     display: block;
     text-align: center;
 }
+
 form
 {
     display: inline-block;
