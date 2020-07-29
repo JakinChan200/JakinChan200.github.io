@@ -2,36 +2,55 @@
 <html>
     <link rel="stylesheet" href="stylesheet.css"> 
     <div class="menubar">
-        <a class="active" href="#Home">Home</a>
+        <a class="active" href="JakinChan200.github.io/index.html">Home</a>
         <a href="#Account">Account</a>
         <a href="#About">About</a>
     </div>
     
   <h1> Social Media Clone </h1>
     <body>
-        <br>
-        <br>
-        <br>
+        <br><br><br>
         <div class = "signupform">
             <br>
-            <form /*action=””*/>
+            <form id="signupfr" >
+                <label for="firstName">First Name:</label><br>
+                <input required type="text" name="signup" placeholder="John" id=”firstName”>
+                <br><br>
+                <label for="lastName">Last Name:</label><br>
+                <input required type="text" name="signup" placeholder="Smith" id=”lastName”>
+                <br><br>
+                <label for="birthDate">Age (MM/DD/YYYY):</label><br>
+                <input required type="text" name="signup" placeholder="01/01/2000" id=”birthDate”>
+                <br><br>
                 <label for="username">Username:</label><br>
-                <input type="text" name="signup" placeholder="Ex. Jakin200" id=”username”>
+                <input required type="text" name="signup" placeholder="Ex. Jakin200" id=”username”>
                 <br><br>
                 <label for="email">Email:</label><br>
-                <input type="text" name="signup" placeholder="Ex. ******@******.com" id=”email”>
+                <input required type="text" name="signup" placeholder="Ex. ******@******.com" id=”email”>
                 <br><br>
-                <label for="password">Password:</label><br>
-                <input type="password" name="signup" placeholder="Ex. P@ssw0rd" id=”password”>
+                <label for="password1">Password:</label><br>
+                <input required type="password" name="signup" placeholder="Ex. P@ssw0rd" id=”password”>
                 <br><br>
-                <input type="submit" value="Submit" formtarget="_parent">
+                <label for="password2">Re-enter Password:</label><br>
+                <input required type="password" name="signup" placeholder="Ex. P@ssw0rd" id=”password”>
+                <br><br>
+                <button onclick="checkPassword()">Submit</button>
+                <!--<input type="submit" value="Submit" formtarget="_parent">-->
                 <br><br>
                 <a href=" " title="haha too bad lol" target="_blank" style="color:black">Forgot Password?</a>
-                <br>
-                <br>
+                <br><br>
             </form>
             <br>
         </div>
+        <p id="passwordWarning"></p>
+        <script>
+            function checkPassword(){
+                var temp = document.getElementId("signupfr");
+                if(temp.elements[temp.length()].value != temp.elements[temp.length()-1].value){
+                    document.getElementId("passwordWarning").innerHTML = "Passwords entered do not Match";
+                }
+            }
+        </script>
         <div id="box"></div>
     </body>
 </html>
