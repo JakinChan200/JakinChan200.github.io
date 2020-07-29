@@ -17,12 +17,14 @@
             <p> Text test two </p>
         <div class="login-card">
             <form>
+                <script src="login.js"></script>
                 <label for="username"><b>Username</b></label><br>
                 <input type="text" id="username" name="username"><br>
                 <label for="password">Password</label><br>
-                <input type="text" id="password" name="password"><br><br>
-            <button type="button" name="login_button">Login<br></button>
+                <input type="password" id="password" name="password"><br><br>
+            <button type="button" name="login_button" onclick="onLoginClick()">Login<br></button>
                 <a href="signup.html"><br><br> Don't have an account? <br> Sign up here. </a>
+                <div id="wrong-pw"> </div>
             </form>
         </div>
     </body>
