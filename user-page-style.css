@@ -1,0 +1,20 @@
+.userpage {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.left-bar {
+    float: left;
+    color: white;
+    display: inline-block;
+}
+
+.main-content {
+    float: left;
+    display: inline-block;
+}
+
+.right-bar {
+    float: right;
+}

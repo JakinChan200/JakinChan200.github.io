@@ -5,10 +5,11 @@
 
 .menubar a {
     float: left;
-    color: gray;
+    color: white;
     padding: 10px 12px;
     font-size: 20px;
     text-decoration: none;
+    font-family: "Verdana";
 }
 
 .menubar a:hover {
@@ -25,6 +26,12 @@ body {
     background-image: url("https://unsplash.com/photos/twukN12EN7c/download");
     /*background-position: center;*/
     background-size: cover;
+}
+
+.sidebar {
+    float: right;
+    display: flex;
+    
 }
 
 .signupform label {
@@ -49,4 +56,5 @@ form {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    width: 50%;
 }
