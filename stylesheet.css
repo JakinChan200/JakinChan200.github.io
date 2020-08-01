@@ -1,3 +1,13 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: table;
+    margin: 0;
+}
+
 .menubar {
     background-color: black;
     overflow: hidden;
@@ -57,4 +67,30 @@ form {
     margin-right: auto;
     text-align: left;
     width: 50%;
+}
+
+.userpage {
+    position: fixed;
+}
+
+.left-bar {
+    float: left;
+    background-color: white;
+    display: inline-block;
+    padding: 100px;
+    margin: 20px;
+    height: 100%;
+}
+
+.feed {
+    float: left;
+    display: inline-block;
+    padding: 450px;
+    margin: 20px;
+}
+
+.right-bar {
+    float: left;
+    padding: 100px;
+    margin: 20px;
 }
