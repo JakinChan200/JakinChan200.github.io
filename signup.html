@@ -28,13 +28,20 @@
                 <label for="email">Email:</label><br>
                 <input required type="text" name="signup" placeholder="Ex. ******@******.com" id=”email”>
                 <br><br>
-                <label for="password1">Password:</label><br>
-                <input required type="password" name="signup" placeholder="Ex. P@ssw0rd" id=”password”>
+               <div>
+                  <label for="password1">Enter Password:</label><br>
+                  <input type="text" id="password">
+               </div>
+                <!--<script async src="//jsfiddle.net/HFMvX/embed/result/dark/"></script>-->
+                <div>
+                    <div class="figure" id="strength_human"></div>    
+                    <div class="figure" id="strength_score"></div>
+                </div>
                 <br><br>
                 <label for="password2">Re-enter Password:</label><br>
-                <input required type="password" name="signup" placeholder="Ex. P@ssw0rd" id=”password”>
+                <input required type="password" name="signup" id=”password”>
                 <br><br>
-                <button onclick="checkPassword()">Submit</button>
+                <button onclick="checkPassword()">Done</button>
                 <!--<input type="submit" value="Submit" formtarget="_parent">-->
                 <br><br>
                 <a href=" " title="haha too bad lol" target="_blank" style="color:black">Forgot Password?</a>
@@ -43,14 +50,14 @@
             <br>
         </div>
         <p id="passwordWarning"></p>
-        <script>
-            function checkPassword(){
-                var temp = document.getElementId("signupfr");
-                if(temp.elements[temp.length()].value != temp.elements[temp.length()-1].value){
-                    document.getElementId("passwordWarning").innerHTML = "Passwords entered do not Match";
-                }
-            }
-        </script>
         <div id="box"></div>
     </body>
 </html>
+
+<!--
+<div>
+    Strength:
+    <div class="figure" id="strength_human">apples</div>    
+    (<div class="figure" id="strength_score">bananas</div>)
+</div>-->
+    
