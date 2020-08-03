@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheet.css"> 
     <div class="menubar">
         <a class="active" href="JakinChan200.github.io/index.html">Home</a>
@@ -35,12 +36,13 @@
                 <!--<script async src="//jsfiddle.net/HFMvX/embed/result/dark/"></script>-->
                 <div>
                     <div class="figure" id="strength_human"></div>    
-                    <div class="figure" id="strength_score"></div>
                 </div>
-                <br><br>
-                <label for="password2">Re-enter Password:</label><br>
-                <input required type="password" name="signup" id=”password”>
-                <br><br>
+                <br>
+                <div>
+                    <label for="password1">Re-Enter Password:</label><br>
+                    <input type="text" id="password2">
+                 </div>
+                 <br><br>
                 <button onclick="checkPassword()">Done</button>
                 <!--<input type="submit" value="Submit" formtarget="_parent">-->
                 <br><br>
@@ -53,11 +55,3 @@
         <div id="box"></div>
     </body>
 </html>
-
-<!--
-<div>
-    Strength:
-    <div class="figure" id="strength_human">apples</div>    
-    (<div class="figure" id="strength_score">bananas</div>)
-</div>-->
-    
