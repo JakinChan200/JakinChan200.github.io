@@ -52,16 +52,14 @@ body {
 
 
 div.signupform {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
     display: block;
     text-align: center;
-    background-color: lightcyan;
+    background-color: white;
     margin-left: 20%;
     margin-right: 20%;
-    height: 300px;
-}
-
-.login-card {
-    width: 50%;
+    height: auto;
 }
 
 form {
@@ -69,7 +67,11 @@ form {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    width: 200px;
+}
+
+
+.login-card {
+    width: 50%;
 }
 
 .userpage {
