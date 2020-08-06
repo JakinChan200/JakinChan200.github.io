@@ -4,6 +4,6 @@ function onLoginClick() {
     if (user.length > 0 && pw.length > 0) {
         window.location.href = "login-home.html";
     } else {
-        document.getElementByID("wrong-pw").innerHTML = "Wrong username and/or password!"
+        document.getElementByID("wrong-pw").innerHTML = "Wrong username and/or password!";
     }
 }
