@@ -3,17 +3,20 @@ from config import Config
 from forms import LoginForm
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf.csrf import CSRFProtect
 import os
 
 
 app = Flask(__name__, template_folder="templates")
-SECRET_KEY = os.urandom(32)
-app.config['SECRET-KEY'] = SECRET_KEY
+csrf = CSRFProtect(app)
+SECRET_KEY = 'placeholder'
+app.secret_key = SECRET_KEY
+csrf.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accounts.sqlite3'
 db = SQLAlchemy(app)
 db.Model.metadata.reflect(db.engine)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     form = LoginForm()
     return render_template('index.html', title='Sign in', form=form)
