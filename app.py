@@ -4,6 +4,7 @@ from forms import LoginForm
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
+from flask_migrate import Migrate
 import os
 
 
@@ -14,6 +15,7 @@ app.secret_key = SECRET_KEY
 csrf.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accounts.sqlite3'
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 db.Model.metadata.reflect(db.engine)
 
 @app.route('/', methods=['GET', 'POST'])
