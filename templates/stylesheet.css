@@ -78,24 +78,36 @@ form {
     position: fixed;
 }
 
-.left-bar {
+.bar {
     float: left;
+    background-color: green;
+}
+
+.left-bar {
+    width: 25%;
     background-color: white;
-    display: inline-block;
+    padding: 100px;
+    margin: 20px;
+    height: 500px;
+}
+
+.feed {
+    width: 50%;
+    background-color: white;
     padding: 100px;
     margin: 20px;
     height: 100%;
 }
 
-.feed {
-    float: left;
-    display: inline-block;
-    padding: 450px;
+.right-bar {
+    width: 25%;
+    background-color: blue;
+    padding: 100px;
     margin: 20px;
 }
 
-.right-bar {
-    float: left;
-    padding: 100px;
-    margin: 20px;
+.userpage:after {
+    content: "";
+    display: table;
+    clear: all;
 }
