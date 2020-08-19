@@ -7,7 +7,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_migrate import Migrate
 import os
 
-
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app = Flask(__name__, template_folder="templates")
 csrf = CSRFProtect(app)
 SECRET_KEY = 'placeholder'
