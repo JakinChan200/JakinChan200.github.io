@@ -7,13 +7,13 @@ from flask_wtf.csrf import CSRFProtect
 from flask_migrate import Migrate
 import os
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app = Flask(__name__, template_folder="templates")
 csrf = CSRFProtect(app)
 SECRET_KEY = 'placeholder'
 app.secret_key = SECRET_KEY
 csrf.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///accounts.sqlite3'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 db.Model.metadata.reflect(db.engine)
